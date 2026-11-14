@@ -626,6 +626,33 @@ sup.ref a:hover { text-decoration: underline; }
 .dot-key .dot { margin-left: 8px; }
 .dot-key .dot:first-child { margin-left: 0; }
 
+/* ---------- Outreach page ---------- */
+/* One card per project. The first card is the featured one: full width, drawing beside the text.
+   Later cards sit two to a row with the drawing on top. Everything stacks on phones. */
+.outreach-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.outreach-project { display: grid; grid-template-rows: 180px auto; border: 1px solid var(--line); border-bottom: 5px solid var(--red); border-radius: 14px; overflow: hidden; background: var(--bg); scroll-margin-top: 12px; }
+.outreach-project:first-child { grid-column: 1 / -1; grid-template-rows: none; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); }
+.outreach-text { padding: 28px 32px; align-self: center; }
+.outreach-project:first-child .outreach-text { padding: 40px 44px; }
+.outreach-text h3 { font-size: 1.6rem; margin: 10px 0 10px; }
+.outreach-project:first-child h3 { font-size: 2rem; }
+.outreach-text p { margin: 0 0 24px; color: var(--muted); max-width: 40em; }
+/* Drawing panel: the same night blue, faint grid and red glow as the dark banners (.page-hero-grid) */
+.outreach-art { display: flex; align-items: center; justify-content: center; min-height: 100%; background-color: var(--night); background-image: radial-gradient(ellipse at 50% 40%, rgba(166, 25, 46, 0.4), transparent 65%), linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px); background-size: auto, 32px 32px, 32px 32px; }
+.outreach-art svg { display: block; width: 100%; max-width: 360px; height: auto; max-height: 100%; }
+.outreach-art-layer { fill: rgba(255, 255, 255, 0.07); stroke: rgba(255, 255, 255, 0.45); stroke-width: 1.5; }
+.outreach-art-track { stroke: var(--red-light); stroke-width: 2.5; stroke-linecap: round; stroke-dasharray: 2 7; }
+.outreach-art-hit { fill: var(--red-light); filter: drop-shadow(0 0 6px var(--red-light)); }
+@media (max-width: 760px) {
+  .outreach-list { grid-template-columns: 1fr; }
+  .outreach-project:first-child { grid-template-columns: 1fr; grid-template-rows: 200px auto; }
+  .outreach-project:first-child .outreach-text, .outreach-text { padding: 24px 22px 28px; }
+  .outreach-project:first-child h3 { font-size: 1.6rem; }
+  .outreach-art svg { height: 100%; }
+  /* Full-width button, so a long label wraps neatly and is easy to tap */
+  .outreach-text .button { display: block; text-align: center; line-height: 1.35; }
+}
+
 /* ---------- Shared building blocks (used on every page) ---------- */
 /* One heading style for every content section */
 .section-title { font-size: 2rem; line-height: 1.2; margin: 0 0 20px; letter-spacing: -0.01em; }
