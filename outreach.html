@@ -38,7 +38,7 @@
 
   <main class="research">
     <!-- OUTREACH PROJECTS
-         To add a project: copy one <article class="outreach-project"> block and change the tag, title, text, button and link.
+         To add a project: copy one <article class="outreach-project"> block and change the photo, tag, title, text, button and link.
          The first project in the list is the featured one and gets the larger layout. Keep the copy short and stick to
          what the project's own leads have approved. -->
     <section id="projects" class="research-section">
@@ -46,15 +46,9 @@
         <h2 class="section-title">Outreach projects</h2>
         <div class="outreach-list">
           <article id="bc-muons" class="outreach-project">
-            <!-- Decorative drawing: a cosmic-ray muon track crossing two detector layers. -->
-            <div class="outreach-art" aria-hidden="true">
-              <svg viewBox="0 0 320 240" focusable="false">
-                <rect class="outreach-art-layer" x="70" y="82" width="180" height="22" rx="4"/>
-                <rect class="outreach-art-layer" x="70" y="146" width="180" height="22" rx="4"/>
-                <line class="outreach-art-track" x1="118" y1="0" x2="202" y2="240"/>
-                <circle class="outreach-art-hit" cx="149" cy="93" r="7"/>
-                <circle class="outreach-art-hit" cx="172" cy="157" r="7"/>
-              </svg>
+            <!-- Photo from the project's detector manual (bcmuons.science.sfu.ca/manual/), cropped. Credit is at the bottom of the page. -->
+            <div class="outreach-photo">
+              <img src="images/bc-muons-detector.jpg" alt="A small blue cosmic-ray muon detector with a display screen, a button and two lights on its front.">
             </div>
             <div class="outreach-text">
               <span class="tag tag-neutral">In B.C. high schools</span>
@@ -76,6 +70,10 @@
         <a class="button button-light" href="join.html">How to join</a>
       </div>
     </section>
+
+    <div class="wrap">
+      <p class="credits">Photo: CosmicWatch detector, from the <a href="https://bcmuons.science.sfu.ca/manual/">B.C. Muons in Classrooms detector manual</a>.</p>
+    </div>
   </main>
 
   <!-- FOOTER: the same block is on every page. -->

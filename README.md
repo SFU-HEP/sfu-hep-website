@@ -43,7 +43,7 @@ For anything bigger than a typo, work on a branch and open a pull request so som
 
 **Post news.** In `news.html`, copy one `<article class="news-item">` block to the top of "Group news". Also update the "Latest news" cards on `index.html` (keep the two newest). Every few months, check the ATLAS, P-ONE and IceCube news sites and copy new items into their sections; the comments in `news.html` explain how.
 
-**Add an outreach project.** In `outreach.html`, copy one `<article class="outreach-project">` block and change the tag, title, text, button and link. The first project in the list is featured (full width, drawing beside the text); later ones sit two to a row.
+**Add an outreach project.** In `outreach.html`, copy one `<article class="outreach-project">` block and change the photo, tag, title, text, button and link. Credit the photo at the bottom of the page. The first project in the list is featured (full width, photo beside the text); later ones sit two to a row.
 
 **Add a photo.** Put it in `images/` (resize to about 1600 px wide first) and add `<img src="images/name.jpg" alt="what it shows">` where you want it. For a photo with a caption, copy a `<figure>` block from `research.html`. Only use photos we are allowed to use (our own, SFU's, or openly licensed ones such as CERN's on Wikimedia Commons), and always keep the credit line: most licences require it. People photos go in `images/people/`.
 
